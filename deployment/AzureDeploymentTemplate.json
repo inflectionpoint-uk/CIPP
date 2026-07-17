@@ -189,23 +189,22 @@
       "name": "[variables('serverFarmName')]",
       "location": "[resourceGroup().location]",
       "sku": {
-        "name": "Y1",
-        "tier": "Dynamic",
-        "size": "Y1",
-        "family": "Y",
-        "capacity": 0
+        "name": "EP1",
+        "tier": "ElasticPremium",
+        "size": "EP1",
+        "family": "EP",
+        "capacity": 1
       },
       "properties": {
         "perSiteScaling": false,
-        "maximumElasticWorkerCount": 1,
+        "maximumElasticWorkerCount": 20,
         "isSpot": false,
         "reserved": false,
         "isXenon": false,
         "hyperV": false,
         "targetWorkerCount": 0,
         "targetWorkerSizeId": 0,
-        "name": "[variables('serverFarmName')]",
-        "computeMode": "Dynamic"
+        "name": "[variables('serverFarmName')]"
       }
     },
     {
